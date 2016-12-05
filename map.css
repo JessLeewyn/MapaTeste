@@ -638,10 +638,10 @@ canvas {
   display:none;
 }
 .leaflet-control-mapcentercoord-icon {
-  background: url(http://bboxfinder.com/images/crosshair.png) 50% 50% no-repeat;
+  background: url(http://www.tibiawiki.com.br/images/5/58/Crosshair_map.png) 50% 50% no-repeat;
   margin: -18px 0 0 -18px;
-  width: 36px;
-  height: 36px;
+  width: 520px;
+  height: 462px;
   left: 50%;
   top: 50%;
   content: '';
