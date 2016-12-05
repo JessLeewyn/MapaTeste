@@ -1,3 +1,4 @@
+$(document).ready(function(){
 ! function(t, e, i) {
   function n() {
     var e = t.L;
@@ -4446,7 +4447,7 @@ L.control.mapCenterCoord = function (options) {
         r = e.yMax + 1 + n,
         h = e.xMax + 1 + i,
         d = L.latLngBounds(L.latLng(-o, s), L.latLng(-r, h)),
-        m = t.map = L.map((this.element.dom), {
+        m = t.map = L.map("map", {
           attributionControl: !1,
           crs: L.CRS.CustomZoom,
           fadeAnimation: !1,
@@ -4544,3 +4545,4 @@ L.control.mapCenterCoord = function (options) {
       }
     }))
   }();
+});
