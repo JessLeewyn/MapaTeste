@@ -4024,19 +4024,19 @@
     // format
     if (this.options.latlngFormat === 'DM') {
       deg = parseInt(centerCopy.lng);
-      lng = deg + 'บ ' + this._format('00.000', (centerCopy.lng - deg) * 60) + "'";
+      lng = deg + 'ยบ ' + this._format('00.000', (centerCopy.lng - deg) * 60) + "'";
       deg = parseInt(centerCopy.lat);
-      lat = deg + 'บ ' + this._format('00.000', (centerCopy.lat - deg) * 60) + "'";
+      lat = deg + 'ยบ ' + this._format('00.000', (centerCopy.lat - deg) * 60) + "'";
     } else if (this.options.latlngFormat === 'DMS') {
       deg = parseInt(centerCopy.lng);
       min = (centerCopy.lng - deg) * 60;
-      lng = deg + 'บ ' + this._format('00', parseInt(min)) + "' " + this._format('00.0', (min - parseInt(min)) * 60) + "''";
+      lng = deg + 'ยบ ' + this._format('00', parseInt(min)) + "' " + this._format('00.0', (min - parseInt(min)) * 60) + "''";
       deg = parseInt(centerCopy.lat);
       min = (centerCopy.lat - deg) * 60;
-      lat = deg + 'บ ' + this._format('00', parseInt(min)) + "' " + this._format('00.0', (min - parseInt(min)) * 60) + "''";
+      lat = deg + 'ยบ ' + this._format('00', parseInt(min)) + "' " + this._format('00.0', (min - parseInt(min)) * 60) + "''";
     } else { // 'DD'
-      lng = this._format('#0.00000', centerCopy.lng) + 'บ';
-      lat = this._format('##0.00000', centerCopy.lat) + 'บ';
+      lng = this._format('#0.00000', centerCopy.lng) + 'ยบ';
+      lat = this._format('##0.00000', centerCopy.lat) + 'ยบ';
     }
 
     return L.Util.template(this.options.template, {
@@ -4446,7 +4446,7 @@ L.control.mapCenterCoord = function (options) {
         r = e.yMax + 1 + n,
         h = e.xMax + 1 + i,
         d = L.latLngBounds(L.latLng(-o, s), L.latLng(-r, h)),
-        m = t.map = L.map("map", {
+        m = t.map = L.map((this.element.dom), {
           attributionControl: !1,
           crs: L.CRS.CustomZoom,
           fadeAnimation: !1,
