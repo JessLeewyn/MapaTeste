@@ -4510,7 +4510,7 @@ L.control.mapCenterCoord = function (options) {
         }, !0)
       }), m.on("dblclick", function() {
         4 == m.getZoom() ? m.doubleClickZoom.disable() : m.doubleClickZoom.enable()
-      }), L.control.mapCenterCoord().addTo(m), L.crosshairs().addTo(m), L.control.coordinates({
+      }), L.control.mapCenterCoord().addTo(m), L.control.coordinates({
         position: "bottomleft",
         enableUserInput: !1,
         labelFormatterLat: function(e) {
