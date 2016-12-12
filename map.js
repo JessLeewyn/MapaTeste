@@ -4137,13 +4137,12 @@ L.control.mapCenterCoord = function (options) {
     onAdd: function(t) {
       this._map = t;
       var e = L.DomUtil.create("div", "leaflet-control-level-buttons-panel leaflet-bar"),
-      i.textContent = "/\\", i.href = "#", L.DomEvent.addListener(i, "click", this._onUpButton, this), L.DomEvent.disableClickPropagation(i), e.appendChild(i); 
-	
-      return n.textContent = "\\/", n.href = "#", L.DomEvent.addListener(n, "click", this._onDownButton, this), L.DomEvent.disableClickPropagation(n), e.appendChild(n), e
-	    var n = L.DomUtil.create("a", "leaflet-control-level-buttons-a", e);
+        i = L.DomUtil.create("a", "leaflet-control-level-buttons-a", e);
+      i.textContent = "?", i.href = "#", L.DomEvent.addListener(i, "click", this._onUpButton, this), L.DomEvent.disableClickPropagation(i), e.appendChild(i);
+      var n = L.DomUtil.create("a", "leaflet-control-level-buttons-a", e);
       return n.textContent = "?", n.href = "#", L.DomEvent.addListener(n, "click", this._onDownButton, this), L.DomEvent.disableClickPropagation(n), e.appendChild(n), e
     },
-    onRemove: function() {},
+	onRemove: function() {},
     _onUpButton: function(t) {
       var e = this._tibia_map_obj.floor - 1;
       e >= 0 && this._bringToFront(e), t.preventDefault()
