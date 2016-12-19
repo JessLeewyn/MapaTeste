@@ -4138,9 +4138,9 @@ L.control.mapCenterCoord = function (options) {
       this._map = t;
       var e = L.DomUtil.create("div", "leaflet-control-level-buttons-panel leaflet-bar"),
         i = L.DomUtil.create("a", "leaflet-control-level-buttons-a", e);
-      i.textContent = "?", i.href = "#", L.DomEvent.addListener(i, "click", this._onUpButton, this), L.DomEvent.disableClickPropagation(i), e.appendChild(i);
+      i.textContent = "▲", i.href = "#", L.DomEvent.addListener(i, "click", this._onUpButton, this), L.DomEvent.disableClickPropagation(i), e.appendChild(i);
       var n = L.DomUtil.create("a", "leaflet-control-level-buttons-a", e);
-      return n.textContent = "?", n.href = "#", L.DomEvent.addListener(n, "click", this._onDownButton, this), L.DomEvent.disableClickPropagation(n), e.appendChild(n), e
+      return n.textContent = "▼", n.href = "#", L.DomEvent.addListener(n, "click", this._onDownButton, this), L.DomEvent.disableClickPropagation(n), e.appendChild(n), e
     },
 	onRemove: function() {},
     _onUpButton: function(t) {
