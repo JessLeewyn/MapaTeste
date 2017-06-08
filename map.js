@@ -2932,7 +2932,8 @@ $(document).ready(function(){
     _onDoubleClick: function(t) {
       var e = this._map,
         i = e.getZoom(),
-        n = t.originalEvent.shiftKey ? Math.ceil(i) - 1 : Math.floor(i) + 1;
+        // n = t.originalEvent.shiftKey ? Math.ceil(i) - 1 : Math.floor(i) + 1;
+        n = Math.floor(i);
       "center" === e.options.doubleClickZoom ? e.setZoom(n) : e.setZoomAround(t.containerPoint, n)
     }
   }), o.Map.addInitHook("addHandler", "doubleClickZoom", o.Map.DoubleClickZoom), o.Map.mergeOptions({
@@ -4126,7 +4127,7 @@ L.Map.addInitHook(function () {
     this.addControl(this.MapCenterCoordControl);
   }
 });
-	
+
 L.control.mapCenterCoord = function (options) {
   return new L.Control.MapCenterCoord(options);
 }, L.LevelButtons = L.Control.extend({
@@ -4319,7 +4320,13 @@ L.control.mapCenterCoord = function (options) {
         return i.substr(i.length - e)
       },
       l = function(t, e) {
-        var i = "#" + t.x + "," + t.y + "," + t.floor + ":" + t.zoom;
+        var c = t.x + "," + t.y + "," + t.floor + ":" + t.zoom
+        var i = "#" + c;
+        var iw = "{{mapa|" + c + "|aqui}}";
+        var d = document.createElement('div');
+        d.id = 'show_coords';
+        document.getElementsByTagName('body')[0].appendChild(d);
+        document.getElementById("show_coords").innerHTML = iw;
         e && location.hash != i && window.history.pushState(null, null, i)
       },
       u = function() {
