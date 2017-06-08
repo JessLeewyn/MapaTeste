@@ -349,7 +349,7 @@ canvas {
 
 .leaflet-control-coordinates .uiHidden,
 .leaflet-control-layers {
-  /*display: none*/
+  display: none
 }
 
 .leaflet-control-layers-separator {
@@ -556,7 +556,7 @@ canvas {
 
 .leaflet-control-fullscreen,
 .leaflet-control-coordinates {
-  display: none;
+  /*display: none;*/
 }
 
 .leaflet-control-fullscreen a {
