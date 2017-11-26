@@ -4222,7 +4222,7 @@ $(document).ready(function() {
       function t() {
         this.map = null, this.floor = 7, this.mapFloors = [], this.mapDataStore = [], this.waypoints = []
       }
-      var e = "https://tibiamaps.github.io/tibia-map-data/mapper/",
+      var e = "https://github.com/tibiamaps/tibia-map-data/tree/master/data",
         i = null,
         n = function() {
           var t = new XMLHttpRequest;
