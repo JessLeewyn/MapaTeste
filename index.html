@@ -1,47 +1,26 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>Tibia Wiki - Mapa</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://jessleewyn.github.io/MapaTeste/map.js"></script>
-  <link rel="stylesheet" href="https://jessleewyn.github.io/MapaTeste/map.css">
- <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-    html, body, #map {
-      height: 100%;
-    }
-  </style>
- </head>
- <body>
-<div id="map"></div>
-<div id="map_info">
-  <table id="info_table">
-    <tr>
-      <td class="td1">Coordenadas:</td>
-      <td class="td2" id="info_coords" onclick="SelectElement('info_coords');"></td>
-    </tr>
-    <tr>
-      <td class="td1" onclick="SelectElement('info_link');">Tibia Wiki:</td>
-      <td class="td2" onclick="SelectElement('info_link2');">
-        <input id="wiki" readonly="readonly" type="text" value="" size="40" style="background:#FFFFFF; color:#000000; padding-left: 1px; border: 1px solid #A7D7F9; -moz-border-radius: 2px; border-radius: 2px;" onclick="this.select()" />
-      </td>
-    </tr>
-    <tr>
-      <td class="td1" onclick="SelectElement('info_link');" valign="top">Link direto:</td>
-      <td class="td2" onclick="SelectElement('info_link2');">
-        <input id="info_link" readonly="readonly" type="text" value="" size="40" style="background:#FFFFFF; color:#000000; padding-left: 1px; border: 1px solid #A7D7F9; -moz-border-radius: 2px; border-radius: 2px;" onclick="this.select()" />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="text-align:center">
-        <small>Mapa fornecido por TibiaMaps.io</small>
-      </td>
-    </tr>
-  </table>
-</div>
-
- </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Tibia Map</title>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+		<link rel="stylesheet" href="map.css">
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			#map {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+			}
+		</style>
+		<link rel="icon" href="favicon.ico">
+	
+	<body>
+		<div id="map"></div>
+		<script src="map.js"></script>
+	</body>
 </html>
